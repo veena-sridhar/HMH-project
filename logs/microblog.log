@@ -57,3 +57,7 @@ ValueError: could not convert string to float: 'positive'
 2018-01-28 00:11:35,620 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
 2018-01-28 22:19:14,867 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
 2018-02-03 12:02:49,851 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-02-03 13:16:16,644 INFO: WriteMind startup [in /Users/davidliu/Website/HMH-project/app/__init__.py:57]
+2018-02-03 13:16:32,512 INFO: WriteMind startup [in /Users/davidliu/Website/HMH-project/app/__init__.py:57]
+2018-02-03 13:23:40,880 INFO: WriteMind startup [in /Users/davidliu/Website/HMH-project/app/__init__.py:56]
+2018-02-03 13:23:46,500 INFO: WriteMind startup [in /Users/davidliu/Website/HMH-project/app/__init__.py:56]

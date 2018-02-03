@@ -159,7 +159,6 @@ def get_keywords(text):
 def get_depression_factor(text):
     # Take a bunch of examples of depressed peoples' blog posts and writings
     # Take a bunch of normal people's blog posts and writings
-    # 
 
     occurances = sum([text.count(word) for word in DEPRESSION_WORDS])
     similarity = fuzz.ratio(text, ' '.join(DEPRESSION_WORDS))
