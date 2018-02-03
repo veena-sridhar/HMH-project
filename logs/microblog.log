@@ -1,0 +1,59 @@
+2018-01-25 19:12:48,724 ERROR: Exception on /create [POST] [in /Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/davidliu/Website/microblog/app/routes.py", line 158, in create
+    word_metrics = get_text_metrics(form.content.data)
+  File "/Users/davidliu/Website/microblog/app/algos.py", line 87, in get_text_metrics
+    polarity_sum += float(sn.polarity_value(word))
+ValueError: could not convert string to float: 'positive'
+2018-01-25 19:13:19,565 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:14:53,175 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:15:58,968 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:21:10,443 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:21:45,472 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:23:27,900 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:26:37,115 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:26:47,629 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:30:46,386 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:37:02,542 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:37:13,122 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:39:38,156 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:40:10,703 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:40:40,359 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:40:58,112 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:41:52,837 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:47:16,415 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:49:37,711 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:58:25,814 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 20:38:48,472 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 20:39:18,279 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 20:39:44,767 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 20:48:08,090 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:02:01,312 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:03:04,033 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:05:02,502 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:06:54,772 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:14:16,832 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:15:06,587 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:16:51,237 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:17:20,184 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:19:58,682 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:21:10,692 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:22:25,467 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-26 01:26:46,746 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-28 00:11:35,620 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-28 22:19:14,867 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-02-03 12:02:49,851 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]

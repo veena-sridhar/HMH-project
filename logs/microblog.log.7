@@ -1,0 +1,68 @@
+2018-01-25 14:19:45,477 ERROR: Exception on /index [GET] [in /Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/davidliu/Website/microblog/app/routes.py", line 26, in index
+    form = PostForm()
+NameError: name 'PostForm' is not defined
+2018-01-25 14:20:37,630 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 14:21:02,340 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 14:21:17,915 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 14:48:16,797 ERROR: Exception on /create [POST] [in /Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/davidliu/Website/microblog/app/routes.py", line 152, in create
+    language = guess_language(form.post.data)
+NameError: name 'guess_language' is not defined
+2018-01-25 14:49:02,103 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 14:49:03,507 ERROR: Exception on /create [POST] [in /Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/davidliu/Website/microblog/app/routes.py", line 153, in create
+    language = guess_language(form.post.data)
+AttributeError: 'EntryForm' object has no attribute 'post'
+2018-01-25 14:50:49,823 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 18:20:09,996 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 18:27:37,028 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 18:54:58,827 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 18:55:29,419 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 18:56:31,919 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 18:59:18,402 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]

@@ -1,0 +1,107 @@
+2018-01-25 13:54:55,739 ERROR: Exception on /create [GET] [in /Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/davidliu/Website/microblog/app/routes.py", line 157, in create
+    return render_template('create.html', title = 'Create New Entry', form = form)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/davidliu/Website/microblog/app/templates/create.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidliu/Website/microblog/app/templates/base.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/Users/davidliu/Website/microblog/app/templates/base.html", line 103, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/Users/davidliu/Website/microblog/app/templates/create.html", line 52, in block "app_content"
+    {{ form.draft.label }}
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.EntryForm object' has no attribute 'draft'
+2018-01-25 13:55:00,944 ERROR: Exception on /user/asdf [GET] [in /Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/davidliu/Website/microblog/app/routes.py", line 127, in user
+    prev_url = prev_url)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/davidliu/Website/microblog/app/templates/user.html", line 38, in template
+    {% if current_user = user.username %}
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 213, in parse_if
+    'name:endif'))
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 164, in parse_statements
+    self.stream.expect('block_end')
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '='
+2018-01-25 13:56:15,958 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]

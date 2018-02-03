@@ -1,0 +1,91 @@
+2018-01-25 18:59:56,764 ERROR: Exception on /entries/dave [GET] [in /Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/davidliu/Website/microblog/app/routes.py", line 234, in entries
+    prev_url = prev_url)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/davidliu/Website/microblog/app/templates/_post.html", line 20, in template
+    <td>{{ post. }}</td>
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/Users/davidliu/Website/microblog/app/templates/entries.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidliu/Website/microblog/app/templates/base.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/Users/davidliu/Website/microblog/app/templates/base.html", line 103, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/Users/davidliu/Website/microblog/app/templates/entries.html", line 11, in block "app_content"
+    <p>{% include '_post.html' %}</p>
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/davidliu/Website/microblog/app/templates/_post.html", line 20, in template
+    <td>{{ post. }}</td>
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 875, in subparse
+    add_data(self.parse_tuple(with_condexpr=True))
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 620, in parse_tuple
+    args.append(parse())
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 547, in parse_unary
+    node = self.parse_postfix(node)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 672, in parse_postfix
+    node = self.parse_subscript(node)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 705, in parse_subscript
+    self.fail('expected name or number', attr_token.lineno)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/jinja2/parser.py", line 59, in fail
+    raise exc(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected name or number

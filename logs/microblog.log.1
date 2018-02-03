@@ -1,0 +1,117 @@
+2018-01-25 19:07:45,538 ERROR: Exception on /create [POST] [in /Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/davidliu/Website/microblog/app/routes.py", line 158, in create
+    word_metrics = get_text_metrics(form.content.data)
+  File "/Users/davidliu/Website/microblog/app/algos.py", line 81, in get_text_metrics
+    if word not in concepts:
+NameError: name 'concepts' is not defined
+2018-01-25 19:08:58,616 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:09:10,183 ERROR: Exception on /create [POST] [in /Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 11 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/davidliu/Website/microblog/app/routes.py", line 195, in create
+    db.session.commit()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 937, in commit
+    self.transaction.commit()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 461, in commit
+    self._prepare_impl()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 441, in _prepare_impl
+    self.session.flush()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 2237, in flush
+    self._flush(objects)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 2363, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/session.py", line 2327, in _flush
+    flush_context.execute()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 11 - probably unsupported type. [SQL: 'INSERT INTO entry (user_id, title, slug, content, is_published, timestamp, sentiment, keywords, language, polarity, subjectivity, mood_tags, word_semantics, attention, sensitivity, pleasantness, aptitude, depression_factor) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'] [parameters: (2, 'asdfasdf', 'asdfasdf', 'asdfasdf', 1, '2018-01-26 03:09:10.179270', None, None, '', 0.0, 0.0, set(), set(), 0, 0, 0, 0, None)] (Background on this error at: http://sqlalche.me/e/rvf5)
+2018-01-25 19:10:42,570 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
+2018-01-25 19:11:45,786 ERROR: Exception on /create [POST] [in /Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/davidliu/.virtualenvs/default3/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/davidliu/Website/microblog/app/routes.py", line 158, in create
+    word_metrics = get_text_metrics(form.content.data)
+  File "/Users/davidliu/Website/microblog/app/algos.py", line 87, in get_text_metrics
+    polarity_sum += sn.polarity_value(word)
+TypeError: unsupported operand type(s) for +=: 'int' and 'str'
+2018-01-25 19:12:46,092 INFO: WriteMind startup [in /Users/davidliu/Website/microblog/app/__init__.py:57]
